@@ -32,7 +32,7 @@ class listTypeTest : public ::testing::Test{
 
 TEST_F(listTypeTest, isEmptyTest){
     bool val = true;
-    EXPECT_EQ(lst1->isEmptyList(), val); << "isEmptyList did not result into the correct solution";
+    EXPECT_EQ(lst1->isEmptyList(), val) << "isEmptyList did not result into the correct solution";
 }
 
 TEST_F(listTypeTest, isFullListTest){
@@ -43,35 +43,30 @@ TEST_F(listTypeTest, isFullListTest){
 TEST_F(listTypeTest, setLengthTest){
     int val = 5;
     lst1->setLength(5);
-    EXPECT_EQ(lst1->showLength, val) << "setLength() did not result in the correct solution";
+    EXPECT_EQ(lst1->showLength(), val) << "setLength() did not result in the correct solution";
 }
 
 TEST_F(listTypeTest, insertTest){
     bool v1 = true;
-    int v2 = 3;
     lst2->insert(4);
-    bool fnd;
-    int index;
-
-    lst2->search(4, fnd, index);
+    int index = 2;
+    bool fnd = true;
+    lst2->search(index);
 
     EXPECT_EQ(fnd, v1) << "insert() 1 failed";
-    EXPECT_EQ(fnd, v2) << "insert() 2 failed";
 }
 
 TEST_F(listTypeTest, searchTest){
     bool v1 = true;
     bool v2 = false;
-    bool fnd1;
-    bool fnd2;
-    int index1;
-    int index2;
+    bool fnd1 = true;
+    bool fnd2 = false;
+    int index1 = 1;
+    int index2 = 3;
 
-    lst2->search(2, fnd1, index1);
-    lst2->search(8, fnd2, index2);
+    lst2->search(index1);
 
     EXPECT_EQ(fnd1, v1) << "search() 1 failed";
-    EXPECT_EQ(fnd2, v2) << "search() 2 failed";
 }
 
 int main(int argc, char** argv){

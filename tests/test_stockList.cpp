@@ -1,13 +1,13 @@
 #include "lib/gtest-1.7.0/include/gtest/gtest.h"
 #include <iostream>
-#include "stockListType.h"
+#include "stockList.h"
 using namespace std;
 
 class stockListTypeTest : public ::testing::Test{
     protected:
         void SetUp() override
         {
-            lst1 = new stockListType;
+            lst1 = new stockListType(5);
 
         }
 
@@ -16,7 +16,7 @@ class stockListTypeTest : public ::testing::Test{
             delete lst1;
             lst1 = nullptr;
             delete lst2;
-            lest2 = nullptr;
+            lst2 = nullptr;
         }
         stockListType* lst1 = nullptr;
         stockListType* lst2 = nullptr;
@@ -24,7 +24,6 @@ class stockListTypeTest : public ::testing::Test{
 
 TEST_F(stockListTypeTest, constructorTest){
     int val = 5;
-    lst1 = new stockListType(5);
 
     EXPECT_EQ(lst1->showLength(), val) << "constructor test failed.\n";
 }

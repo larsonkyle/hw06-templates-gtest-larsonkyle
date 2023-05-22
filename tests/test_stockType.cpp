@@ -75,17 +75,17 @@ TEST_F(stockTypeTest, calculatePercentGainLossTest){// previousClose / closingPr
     EXPECT_EQ(stck3->calculatePercentGainLoss(), val) << "calculatePercentGainLossTest failed\n";
 }
 
-TEST_F(stockTypeTest, operator>Test){
+TEST_F(stockTypeTest, greaterThanOperatorTest){
     bool val = false;
     EXPECT_EQ((*stck2) > (*stck3), val) << "operator > test failed.\n";
 }
 
-TEST_F(stockTypeTest, operator<Test){
+TEST_F(stockTypeTest, lessThanOperatorTest){
     bool val = true;
     EXPECT_EQ((*stck2) < (*stck3), val) << "operator > test failed.\n";
 }
 
-TEST_F(stockTypeTest, operator==Test){
+TEST_F(stockTypeTest, logicallyEqualOperatorTest){
     bool val = true;
     EXPECT_EQ((*stck2) == (*stck2), val) << "operator > test failed.\n";
 }
