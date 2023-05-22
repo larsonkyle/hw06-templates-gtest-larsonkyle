@@ -7,7 +7,7 @@
 class stockListType : public listType<stockType> {
     public:
         void sortByGainLoss();
-        void printListByGainLoss() const;
+        void printListByGainLoss();
 
         stockListType(const stockListType &right); // copy constructor
         stockListType operator=(const stockListType &right); //assignment operator

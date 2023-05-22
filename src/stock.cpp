@@ -1,4 +1,5 @@
 #include "stock.h"
+using namespace std;
 
 //constructors
 stockType::stockType(){

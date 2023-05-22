@@ -32,10 +32,10 @@ void stockListType::sortIndices(int* indices, const stockType* arr, int size) {
     }
 }
 
-void stockListType::printListByGainLoss() const{
+void stockListType::printListByGainLoss(){
     sortIndices(sortedByGainLoss, elements, length);
     for (int i = 0; i < length; i++) {
-        int index = hashTableGainLossArray[i];
+        int index = sortedByGainLoss[i];
         elements[index].printStockInfo(); // Print the stock information based on the sorted indices
     }
 }

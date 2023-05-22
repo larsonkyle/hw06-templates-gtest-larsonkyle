@@ -177,14 +177,14 @@ void listType<T>::binarySeacrh(T searchItem,
         mid = (first + last) / 2;
 
         if (elements[mid] == searchItem)
-            found = 0;
+            found = 1;
         else if (elements[mid] > searchItem)
             last = mid - 1;
         else
             first = mid + 1;
     }
 
-    loc = mid;
+    index = mid;
 }
 
 template <class T>
