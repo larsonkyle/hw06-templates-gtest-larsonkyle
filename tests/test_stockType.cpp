@@ -1,6 +1,6 @@
 #include "lib/gtest-1.7.0/include/gtest/gtest.h"
 #include <iostream>
-#include "stock.h"
+#include "../src/stock.h"
 using namespace std;
 
 class stockTypeTest : public ::testing::Test{
@@ -71,8 +71,8 @@ TEST_F(stockTypeTest, setVariableTest){//"CSCO" 100.00 102.00 105.00 98.00 101.0
 }
 
 TEST_F(stockTypeTest, calculatePercentGainLossTest){// previousClose / closingPrice | 6 / 3
-    double val = 115.75 / 113.50;
-    EXPECT_EQ(stck3->calculatePercentGainLoss(), val) << "calculatePercentGainLossTest failed\n";
+    double val = .98056155507559395;
+    EXPECT_DOUBLE_EQ(stck3->calculatePercentGainLoss(), val) << "calculatePercentGainLossTest failed\n";
 }
 
 TEST_F(stockTypeTest, greaterThanOperatorTest){

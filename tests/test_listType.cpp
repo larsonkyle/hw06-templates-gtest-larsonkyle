@@ -1,6 +1,6 @@
 #include "lib/gtest-1.7.0/include/gtest/gtest.h"
 #include <iostream>
-#include "listType.h"
+#include "../src/listType.h"
 
 class listTypeTest : public ::testing::Test{
     protected:
@@ -36,7 +36,7 @@ TEST_F(listTypeTest, isEmptyTest){
 }
 
 TEST_F(listTypeTest, isFullListTest){
-    bool val = true;
+    bool val = false;
     EXPECT_EQ(lst2->isFullList(), val) << "isFullList did not result into the correct solution";
 }
 

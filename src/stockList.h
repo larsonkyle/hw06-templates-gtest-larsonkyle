@@ -12,6 +12,7 @@ class stockListType : public listType<stockType> {
         stockListType(const stockListType &right); // copy constructor
         stockListType operator=(const stockListType &right); //assignment operator
 
+	stockListType(){}
         stockListType(int listSize) : listType<stockType>(listSize){}
         //no destructor needed, array is statically allocated.
     private:
